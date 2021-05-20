@@ -5,7 +5,7 @@ const qs = require('qs')
 const getVideo = async id => {
 	const data = await xf
 		.get(
-			`https://www.youtube.com/get_video_info?video_id=${id}&el=detailpage`
+			`https://www.youtube.com/get_video_info?html5=1&video_id=${id}&el=detailpage`
 		)
 		.text()
 		.catch(err => null)
